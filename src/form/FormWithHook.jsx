@@ -31,14 +31,14 @@ export default function FormWithHook(){
         <>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Row>
-                    <Col>
+                    <Col md={6}>
                         <Form.Group>
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" placeholder="my.email@mail.com" ref={register({ required: true })} name="email"/>
                             <Form.Text>Enter your mail, we will send you tons of publicity !!</Form.Text>
                         </Form.Group>
                     </Col>
-                    <Col>
+                    <Col md={6}>
                         <Form.Group>
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" placeholder="******" ref={register({ required: true })} name="password"/>
