@@ -1,0 +1,37 @@
+.btn{
+    height: 4.4rem;
+
+    //behavior
+    padding: 0.8rem 2.6rem;
+    margin-bottom: 3rem;
+
+    //design
+    border: none;
+    border-radius: 1.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-family: $headingFont;
+    font-weight: $fontWeightBold;
+
+    &:active, &:focus{
+        outline: none;
+    }
+
+    &:active{
+        transform: scale(0.95);
+    }
+
+}
+
+.btn-primary{
+    background: $primary;
+    color: $white;
+
+    &:hover{
+        background-color: $darkPrimary;
+    }
+
+    &:active, &:focus{
+        background-color: $darkPrimary;
+    }
+}

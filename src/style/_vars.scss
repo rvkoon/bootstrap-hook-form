@@ -1,0 +1,168 @@
+// Configuration file
+// Set vars for fonts, colors, etc...
+
+// ••• Colors •••
+
+$primary     : #FF6543; // Other good choices : DEC79B, FB9039, FFB600, FAB162, ORIGINAL => FF7E3D
+$darkPrimary : #ee5937; // ORIGINAL => F77230
+$lightPrimary: #fd9d88;
+$secondary   : #333951; // ORIGINAL => 161C2E
+$white       : #FFFFFF;
+$lightGrey   : #F7F7F7;
+$midGrey     : #B4B4B4;
+$darkGrey    : #767676;
+$lightBlue   : #F8F8FA; // ORIGINAL => F8F8FA
+$red         : #FF234B;
+$lightRed    : #FC758E;
+$green       : #52e081;
+
+$gradientPrimary : linear-gradient(-45deg, $primary, $lightPrimary);
+
+.text-primary       { color: $primary; }
+.text-darkPrimary   { color: $darkPrimary; }
+.text-secondary     { color: $secondary; }
+.text-white         { color: $white; }
+.text-lightGrey     { color: $lightGrey; }
+.text-midGrey       { color: $midGrey; }
+.text-darkGrey      { color: $darkGrey; }
+.text-red           { color: $red; }
+.text-lightRed      { color: $lightRed; }
+.text-green         { color: $green; }
+.text-lightBlue     { color: $lightBlue; }
+.text-lightPrimary  { color: $lightPrimary; }
+
+.bckg-primary       { background-color: $primary; }
+.bckg-darkPrimary   { background-color: $darkPrimary; }
+.bckg-secondary     { background-color: $secondary; }
+.bckg-white         { background-color: $white; }
+.bckg-lightGrey     { background-color: $lightGrey; }
+.bckg-midGrey       { background-color: $midGrey; }
+.bckg-darkGrey      { background-color: $darkGrey; }
+.bckg-red           { background-color: $red; }
+.bckg-lightRed      { background-color: $lightRed; }
+.bckg-green         { background-color: $green; }
+.bckg-lightBlue     { background-color: $lightBlue; }
+.bckg-lightPrimary  { background-color: $lightPrimary; }
+
+.gradient-primary   { background: linear-gradient(-45deg, $primary, $lightPrimary)}
+
+// ••• Fonts •••
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900i&display=swap');
+
+$primaryFont: 'Rubik', sans-serif;
+$headingFont: 'Rubik', sans-serif;
+
+$fontWeightLight      :  200;
+$fontWeightRegular    :  400;
+$fontWeightBold       :  600;
+$fontWeightExtraBold  :  700;
+$fontWeightBlack      :  900;
+
+p, a, li, h1, h2, h3, h4, h5, h6, em, span, label, input{
+    font-family: $primaryFont;
+    color: $secondary;
+    font-weight: $fontWeightRegular;
+}
+
+p, a  { font-size: 1.4rem; line-height: 2.4rem; }
+h1    { font-size: 5.6rem; font-weight:$fontWeightBold; font-family:$headingFont; line-height: 6.4rem; }
+h2    { font-size: 4.8rem; font-weight:$fontWeightBold; font-family:$headingFont; line-height: 5.6rem; }
+h3    { font-size: 4rem;   font-weight:$fontWeightBold; font-family:$headingFont; line-height: 4.8rem; }
+h4    { font-size: 3.2rem; font-weight:$fontWeightBold; font-family:$headingFont; line-height: 4rem;   }
+h5    { font-size: 2.4rem; font-weight:$fontWeightBold; font-family:$headingFont; line-height: 3.2rem; }
+h6    { font-size: 2rem;   font-weight:$fontWeightBold; font-family:$headingFont; line-height: 2.4rem; }
+label { font-family: $headingFont; }
+
+a{
+    display: block;
+    text-decoration: none;
+}
+
+
+.text-bold      { font-weight: $fontWeightBold; }
+.text-extraBold { font-weight: $fontWeightExtraBold;}
+.text-black     { font-weight: $fontWeightBlack; }
+
+.text-center { text-align: center; }
+
+// ••• Z-INDEX ••• 
+
+$zindexOverAll : 10000;
+
+// ••• DISPLAYING ••• 
+
+.display--block       { display: block; }
+.display--inlineBlock { display: inline-block; }
+.display--none        { display: none; }
+.display--flex        { display: flex; }
+.flex-center          { justify-content: center; }
+
+@keyframes showDisplayBlock {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+// ••• SPACING •••
+
+$mbSizes: ("5", "10", "20", "30", "40", "50");
+
+@each $size in $mbSizes{
+    .mb#{$size}{
+        //size
+        margin-bottom: #{$size}px !important;
+    }
+}
+
+@each $size in $mbSizes{
+    .mt#{$size}{
+        //size
+        margin-top: #{$size}px !important;
+    }
+}
+
+@each $size in $mbSizes{
+    .ml#{$size}{
+        //size
+        margin-left: #{$size}px !important;
+    }
+}
+
+@each $size in $mbSizes{
+    .mr#{$size}{
+        //size
+        margin-right: #{$size}px !important;
+    }
+}
+
+.noMarginBottom{
+    margin-bottom: 0 !important;
+}
+
+
+// ••• SIZING •••
+
+$widthSizes: ("5", "10", "20", "25", "30", "40", "45", "50", "60", "65", "70", "75", "80", "90", "100");
+
+@each $size in $widthSizes{
+    .w#{$size}{
+        //size
+        width: #{$size}% !important;
+    }
+}
+
+// ••• DESIGNING •••
+
+$opacities: ("10", "20", "30", "40", "50", "60", "70", "80", "90");
+
+@each $opa in $opacities{
+    .o#{$opa}{
+        //opacity
+        opacity: #{'0.'+$opa} !important;
+    }
+}
+
+
+
